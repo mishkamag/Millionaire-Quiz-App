@@ -1,14 +1,23 @@
 import "./trivia.css";
+import data from "./Questions";
+import { useEffect, useState } from "react";
 
-export default function Trivia() {
+export default function Trivia(props) {
+  const { setTimeOut, questionNumber, setQuestionNumber } = props;
+
+  const [question, setQuestion] = useState(null);
+
+  useEffect(() => {
+    setQuestion(data[questionNumber - 1]);
+  }, [data, questionNumber]);
+
   return (
     <div className="trivia">
-      <div className="question">რომელ წელს მოხდა დიდგორის ბრძოლა?</div>
+      <div className="question">{question?.question}</div>
       <div className="answers">
-        <div className="answer ">1212</div>
-        <div className="answer">1121</div>
-        <div className="answer">1122</div>
-        <div className="answer">1221</div>
+        {question?.answers.map((a) => (
+          <div className="answer ">{a.text}</div>
+        ))}
       </div>
     </div>
   );
