@@ -3,7 +3,7 @@ import data from "./Questions";
 import { useEffect, useState } from "react";
 
 export default function Trivia(props) {
-  const { setTimeOut, questionNumber, setQuestionNumber } = props;
+  const { setStop, questionNumber, setQuestionNumber } = props;
 
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -13,9 +13,27 @@ export default function Trivia(props) {
     setQuestion(data[questionNumber - 1]);
   }, [data, questionNumber]);
 
+  const delay = (duration, callback) => {
+    setTimeout(() => {
+      callback();
+    }, duration);
+  };
+
   const clickHandler = (a) => {
     setSelectedAnswer(a);
     setClassName("answer active");
+    delay(3000, () => {
+      setClassName(a.correct ? "answer correct" : "answer wrong");
+    });
+
+    delay(6000, () => {
+      if (a.correct) {
+        setQuestionNumber((prev) => prev + 1);
+        selectedAnswer(null);
+      } else {
+        setStop(true);
+      }
+    });
   };
 
   return (
