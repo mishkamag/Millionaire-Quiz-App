@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./app.css";
 import Trivia from "./components/Trivia";
 
@@ -24,6 +24,14 @@ function App() {
     { id: 14, amount: "$ 500.000" },
     { id: 15, amount: "$ 1.000.000" },
   ].reverse();
+
+  useEffect(() => {
+    questionNumber > 1 &&
+      setEarnedMoney(
+        moneyPyramid.find((m) => m.id === questionNumber - 1).amount
+      );
+  }, [moneyPyramid, questionNumber]);
+  //მოგებული თანხის გამოთვლა
 
   return (
     <div className="app">
