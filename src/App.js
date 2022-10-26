@@ -5,6 +5,7 @@ import Trivia from "./components/Trivia";
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
+  const [earnedMoney, setEarnedMoney] = useState("$ 0");
 
   const moneyPyramid = [
     { id: 1, amount: "$ 100" },
@@ -27,16 +28,23 @@ function App() {
   return (
     <div className="app">
       <div className="main">
-        <div className="top">
-          <div className="timer">30</div>
-        </div>
-        <div className="bottom">
-          <Trivia
-            setStop={setStop}
-            questionNumber={questionNumber}
-            setQuestionNumber={setQuestionNumber}
-          />
-        </div>
+        {stop ? (
+          <h1 className="endGameText">You Earned: {earnedMoney}</h1>
+        ) : (
+          <>
+            {" "}
+            <div className="top">
+              <div className="timer">30</div>
+            </div>
+            <div className="bottom">
+              <Trivia
+                setStop={setStop}
+                questionNumber={questionNumber}
+                setQuestionNumber={setQuestionNumber}
+              />
+            </div>
+          </>
+        )}
       </div>
       <div className="pyramid">
         <ul className="moneyList">
