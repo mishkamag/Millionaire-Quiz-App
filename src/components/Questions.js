@@ -65,6 +65,29 @@ const data = [
       },
     ],
   },
+  {
+    id: 4,
+    question:
+      "თუ 10 მეტრიან მორს ყოველ დღე 2 მეტრს მოვაჭრი, რამდენ დღეში დავასრულებ ?",
+    answers: [
+      {
+        text: "5",
+        correct: false,
+      },
+      {
+        text: "10",
+        correct: false,
+      },
+      {
+        text: "3",
+        correct: false,
+      },
+      {
+        text: "4",
+        correct: true,
+      },
+    ],
+  },
 ];
 
 export default data;
