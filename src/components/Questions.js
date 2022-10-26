@@ -88,6 +88,28 @@ const data = [
       },
     ],
   },
+  {
+    id: 2,
+    question: "ვინ იყო ერთიანი საქართველოს პირველი მეფე?",
+    answers: [
+      {
+        text: "ბაგრატ III",
+        correct: true,
+      },
+      {
+        text: "ერეკლე II",
+        correct: false,
+      },
+      {
+        text: "დავით აღმაშენებელი",
+        correct: false,
+      },
+      {
+        text: "თამარ მეფე",
+        correct: false,
+      },
+    ],
+  },
 ];
 
 export default data;

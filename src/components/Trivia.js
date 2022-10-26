@@ -48,6 +48,7 @@ export default function Trivia(props) {
         });
       } else {
         wrongAnswer();
+        //ჩასამატებელია სწორი პასუხი რომ გამომიჩნდეს ეკრანზე
         delay(1000, () => {
           setStop(true);
         });
