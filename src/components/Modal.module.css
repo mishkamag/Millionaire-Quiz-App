@@ -10,9 +10,9 @@
 
 .modal {
   position: fixed;
-  top: 20vh;
+  top: 40vh;
   left: 5%;
-  width: 90%;
+  width: 50%;
   background-color: white;
   padding: 1rem;
   border-radius: 14px;
@@ -23,7 +23,7 @@
 
 @media (min-width: 768px) {
   .modal {
-    width: 40rem;
+    width: 20rem;
     left: calc(50% - 20rem);
   }
 }
@@ -37,4 +37,19 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container button {
+  width: 50%;
+  border-radius: 1rem;
+  font-size: 110%;
+}
+
+.container button:hover {
+  background: mediumblue;
 }

@@ -1,10 +1,13 @@
 import Modal from "./Modal";
+import classes from "./Modal.module.css";
 
 const StartGame = (props) => {
   return (
     <Modal>
-      <h3>მზად ხართ თამაშის დასაწყებად</h3>
-      <button onClick={props.onClose}>დიახ</button>
+      <div className={classes.container}>
+        <h3>მზად ხართ თამაშის დასაწყებად ?</h3>
+        <button onClick={props.onClose}>დიახ</button>
+      </div>
     </Modal>
   );
 };
