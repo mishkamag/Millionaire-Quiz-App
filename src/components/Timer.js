@@ -10,7 +10,7 @@ export default function Timer(props) {
       setTimer((prev) => prev - 1);
     }, 1000);
     return () => clearInterval(interval);
-  }, [timer, setTimer]);
+  }, [timer, setStop]);
 
   useEffect(() => {
     setTimer(30);
