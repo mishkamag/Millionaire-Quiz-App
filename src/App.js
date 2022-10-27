@@ -3,6 +3,8 @@ import "./app.css";
 import StartGame from "./components/StartGame";
 import Timer from "./components/Timer";
 import Trivia from "./components/Trivia";
+import play from "./assets/src_sounds_play.mp3";
+import useSound from "use-sound";
 
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -10,8 +12,14 @@ function App() {
   const [earnedMoney, setEarnedMoney] = useState("$ 0");
 
   const [modalIsShow, setModalIsShow] = useState(true);
+  const [letsPlay] = useSound(play);
+
+  // useEffect(() => {
+  //   letsPlay();
+  // }, [letsPlay]);
 
   const hideModalHandler = () => {
+    letsPlay();
     setModalIsShow(false);
   };
 
