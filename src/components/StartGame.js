@@ -1,10 +1,10 @@
 import Modal from "./Modal";
 
-const StartGame = () => {
+const StartGame = (props) => {
   return (
     <Modal>
-      <h1>მზად ხართ თამაშის დასაწყებად</h1>
-      <button>დიახ</button>
+      <h3>მზად ხართ თამაშის დასაწყებად</h3>
+      <button onClick={props.onClose}>დიახ</button>
     </Modal>
   );
 };

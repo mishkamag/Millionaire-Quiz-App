@@ -9,6 +9,12 @@ function App() {
   const [stop, setStop] = useState(false);
   const [earnedMoney, setEarnedMoney] = useState("$ 0");
 
+  const [modalIsShow, setModalIsShow] = useState(true);
+
+  const hideModalHandler = () => {
+    setModalIsShow(false);
+  };
+
   const moneyPyramid = useMemo(
     () =>
       [
@@ -41,7 +47,7 @@ function App() {
 
   return (
     <Fragment>
-      <StartGame />
+      {modalIsShow && <StartGame onClose={hideModalHandler} />}
       <div className="app">
         <div className="main">
           {stop ? (
