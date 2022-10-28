@@ -1,9 +1,9 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
-import "./app.css";
 import StartGame from "./components/StartGame";
 import play from "./assets/src_sounds_play.mp3";
 import useSound from "use-sound";
 import { Main } from "./components/Main";
+import Pyramid from "./components/Pyramid";
 
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -46,7 +46,6 @@ function App() {
         moneyPyramid.find((m) => m.id === questionNumber - 1).amount
       );
   }, [moneyPyramid, questionNumber]);
-  //მოგებული თანხის გამოთვლა
 
   return (
     <Fragment>
@@ -60,22 +59,7 @@ function App() {
           questionNumber={questionNumber}
           stop={stop}
         />
-        <div className="pyramid">
-          <ul className="moneyList">
-            {moneyPyramid.map((m) => (
-              <li
-                className={
-                  questionNumber === m.id
-                    ? "moneyListItem active "
-                    : "moneyListItem "
-                }
-              >
-                <span className="moneyListItemNumber">{m.id}</span>
-                <span className="moneyListItemAmount">{m.amount}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Pyramid moneyPyramid={moneyPyramid} questionNumber={questionNumber} />
       </div>
     </Fragment>
   );

@@ -1,6 +1,5 @@
 import Timer from "./Timer";
 import Trivia from "./Trivia";
-import "../app.css";
 import "./Main.css";
 
 export const Main = (props) => {
