@@ -9,8 +9,8 @@ function App() {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [stop, setStop] = useState(false);
   const [earnedMoney, setEarnedMoney] = useState("$ 0");
-
   const [modalIsShow, setModalIsShow] = useState(true);
+
   const [letsPlay] = useSound(play);
 
   const hideModalHandler = () => {
