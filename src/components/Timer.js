@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function Timer(props) {
   const { setStop, questionNumber } = props;
+
   const [timer, setTimer] = useState(30);
 
   useEffect(() => {

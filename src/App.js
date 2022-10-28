@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import StartGame from "./components/StartGame";
 import play from "./assets/src_sounds_play.mp3";
 import useSound from "use-sound";
@@ -48,20 +48,20 @@ function App() {
   }, [moneyPyramid, questionNumber]);
 
   return (
-    <Fragment>
+    <div className="app">
       {modalIsShow && <StartGame onClose={hideModalHandler} />}
-      <div className="app">
-        <Main
-          earnedMoney={earnedMoney}
-          modalIsShow={modalIsShow}
-          setStop={setStop}
-          setQuestionNumber={setQuestionNumber}
-          questionNumber={questionNumber}
-          stop={stop}
-        />
-        <Pyramid moneyPyramid={moneyPyramid} questionNumber={questionNumber} />
-      </div>
-    </Fragment>
+
+      <Main
+        earnedMoney={earnedMoney}
+        modalIsShow={modalIsShow}
+        setStop={setStop}
+        setQuestionNumber={setQuestionNumber}
+        questionNumber={questionNumber}
+        stop={stop}
+      />
+
+      <Pyramid moneyPyramid={moneyPyramid} questionNumber={questionNumber} />
+    </div>
   );
 }
 
