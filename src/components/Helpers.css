@@ -1,0 +1,10 @@
+.fifty img {
+  max-width: 90%;
+  padding-left: 5rem;
+  padding-bottom: 40rem;
+  cursor: pointer;
+}
+
+.fifty {
+  width: 25%;
+}
