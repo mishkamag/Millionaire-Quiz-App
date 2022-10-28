@@ -1,10 +1,9 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import "./app.css";
 import StartGame from "./components/StartGame";
-import Timer from "./components/Timer";
-import Trivia from "./components/Trivia";
 import play from "./assets/src_sounds_play.mp3";
 import useSound from "use-sound";
+import { Main } from "./components/Main";
 
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1);
@@ -53,29 +52,14 @@ function App() {
     <Fragment>
       {modalIsShow && <StartGame onClose={hideModalHandler} />}
       <div className="app">
-        <div className="main">
-          {stop ? (
-            <h1 className="endGameText">You Earned: {earnedMoney}</h1>
-          ) : (
-            <>
-              {" "}
-              <div className="top">
-                <div className="timer">
-                  {!modalIsShow && (
-                    <Timer setStop={setStop} questionNumber={questionNumber} />
-                  )}
-                </div>
-              </div>
-              <div className="bottom">
-                <Trivia
-                  setStop={setStop}
-                  questionNumber={questionNumber}
-                  setQuestionNumber={setQuestionNumber}
-                />
-              </div>
-            </>
-          )}
-        </div>
+        <Main
+          earnedMoney={earnedMoney}
+          modalIsShow={modalIsShow}
+          setStop={setStop}
+          setQuestionNumber={setQuestionNumber}
+          questionNumber={questionNumber}
+          stop={stop}
+        />
         <div className="pyramid">
           <ul className="moneyList">
             {moneyPyramid.map((m) => (
