@@ -14,10 +14,6 @@ function App() {
   const [modalIsShow, setModalIsShow] = useState(true);
   const [letsPlay] = useSound(play);
 
-  // useEffect(() => {
-  //   letsPlay();
-  // }, [letsPlay]);
-
   const hideModalHandler = () => {
     letsPlay();
     setModalIsShow(false);
@@ -65,7 +61,9 @@ function App() {
               {" "}
               <div className="top">
                 <div className="timer">
-                  <Timer setStop={setStop} questionNumber={questionNumber} />
+                  {!modalIsShow && (
+                    <Timer setStop={setStop} questionNumber={questionNumber} />
+                  )}
                 </div>
               </div>
               <div className="bottom">
