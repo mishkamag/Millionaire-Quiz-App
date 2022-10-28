@@ -56,6 +56,7 @@ export default function Trivia(props) {
       <div className="answers">
         {question?.answers.map((a) => (
           <div
+            key={Math.random()}
             className={selectedAnswer === a ? className : "answer"}
             onClick={() => clickHandler(a)}
           >

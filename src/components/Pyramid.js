@@ -12,6 +12,7 @@ export default function Pyramid(props) {
         <ul className="moneyList">
           {moneyPyramid.map((m) => (
             <li
+              key={m.id}
               className={
                 questionNumber === m.id
                   ? "moneyListItem active "
