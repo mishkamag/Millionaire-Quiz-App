@@ -1,9 +1,10 @@
 import "./Helpers.css";
 import use50 from "../assets/5050.png";
+import data from "./Questions";
 
 export const Helpers = () => {
   const clickImgHandler = () => {
-    console.log("clicked");
+    console.log(data[0].answers[0].correct);
   };
 
   return (
