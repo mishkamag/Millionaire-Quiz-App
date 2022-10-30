@@ -1,19 +1,39 @@
 import "./Helpers.css";
 import use50 from "../assets/5050.png";
-import data from "./Questions";
+// import data from "./Questions";
 import { useState } from "react";
+import used50 from "../assets/5050used.png";
+import audience from "../assets/audience.png";
+import usedAudience from "../assets/audienceUsed.jpg";
 
 export const Helpers = () => {
-  const [hideAnswer, setHideAnswer] = useState(false);
+  const [changeFiftyImg, setChangeFiftyImg] = useState(use50);
+  const [changeAudienceImg, setChangeAudienceImg] = useState(audience);
 
-  const clickImgHandler = () => {
-    setHideAnswer(true);
-    console.log(data[0].answers[0].correct);
+  const changeFiftyImgHandler = () => {
+    setChangeFiftyImg(used50);
+  };
+
+  const changeAudienceImgHandler = () => {
+    setChangeAudienceImg(usedAudience);
   };
 
   return (
-    <div className="fifty">
-      <img src={use50} alt="fifty-fifty" onClick={clickImgHandler} />
+    <div className="logos">
+      <div className="fifty">
+        <img
+          onClick={changeFiftyImgHandler}
+          src={changeFiftyImg ? use50 : used50}
+          alt="fifty-fifty"
+        />
+      </div>
+      <div className="audience">
+        <img
+          src={changeAudienceImg ? audience : usedAudience}
+          alt="audience img"
+          onClick={changeAudienceImgHandler}
+        />
+      </div>
     </div>
   );
 };

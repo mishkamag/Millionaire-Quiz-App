@@ -1,10 +1,15 @@
-.fifty img {
+.logos {
+  width: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.fifty img,
+.audience img {
   max-width: 90%;
   padding-left: 5rem;
   padding-bottom: 40rem;
   cursor: pointer;
-}
-
-.fifty {
-  width: 25%;
 }
