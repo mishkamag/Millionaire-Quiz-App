@@ -7,8 +7,8 @@ import audience from "../assets/audience.png";
 import usedAudience from "../assets/audienceUsed.jpg";
 
 export const Helpers = () => {
-  const [changeFiftyImg, setChangeFiftyImg] = useState(use50);
-  const [changeAudienceImg, setChangeAudienceImg] = useState(audience);
+  const [changeFiftyImg, setChangeFiftyImg] = useState(false);
+  const [changeAudienceImg, setChangeAudienceImg] = useState(false);
 
   const changeFiftyImgHandler = () => {
     setChangeFiftyImg(used50);
@@ -22,14 +22,14 @@ export const Helpers = () => {
     <div className="logos">
       <div className="fifty">
         <img
-          onClick={changeFiftyImgHandler}
-          src={changeFiftyImg ? use50 : used50}
+          src={changeFiftyImg ? used50 : use50}
           alt="fifty-fifty"
+          onClick={changeFiftyImgHandler}
         />
       </div>
       <div className="audience">
         <img
-          src={changeAudienceImg ? audience : usedAudience}
+          src={changeAudienceImg ? usedAudience : audience}
           alt="audience img"
           onClick={changeAudienceImgHandler}
         />
