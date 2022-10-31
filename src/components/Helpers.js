@@ -12,24 +12,27 @@ export const Helpers = () => {
 
   const changeFiftyImgHandler = () => {
     setChangeFiftyImg(used50);
+    console.log("clicked");
   };
 
   const changeAudienceImgHandler = () => {
     setChangeAudienceImg(usedAudience);
   };
 
+  const checkFifty = changeFiftyImg ? used50 : use50;
+  const checkAudience = changeAudienceImg ? usedAudience : audience;
   return (
     <div className="logos">
       <div className="fifty">
         <img
-          src={changeFiftyImg ? used50 : use50}
+          src={checkFifty}
           alt="fifty-fifty"
           onClick={changeFiftyImgHandler}
         />
       </div>
       <div className="audience">
         <img
-          src={changeAudienceImg ? usedAudience : audience}
+          src={checkAudience}
           alt="audience img"
           onClick={changeAudienceImgHandler}
         />

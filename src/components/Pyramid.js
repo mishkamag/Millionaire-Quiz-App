@@ -6,9 +6,9 @@ export default function Pyramid(props) {
   const { moneyPyramid, questionNumber } = props;
 
   return (
-    <Fragment>
+    <div className="pyramids">
+      <Helpers />
       <div className="pyramid">
-        <Helpers />
         <ul className="moneyList">
           {moneyPyramid.map((m) => (
             <li
@@ -25,6 +25,6 @@ export default function Pyramid(props) {
           ))}
         </ul>
       </div>
-    </Fragment>
+    </div>
   );
 }
