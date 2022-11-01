@@ -15,7 +15,7 @@ export const Main = (props) => {
   return (
     <div className="main">
       {stop ? (
-        <h1 className="endGameText">You Earned: {earnedMoney}</h1>
+        <h1 className="endGameText">თქვენ მოიგეთ: {earnedMoney}</h1>
       ) : (
         <>
           {" "}
