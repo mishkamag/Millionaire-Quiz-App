@@ -4,7 +4,7 @@ import data from "./Questions";
 import { useState } from "react";
 import used50 from "../assets/5050used.png";
 import audience from "../assets/audience.png";
-import usedAudience from "../assets/audienceUsed.jpg";
+import usedAudience from "../assets/audienceUsed.png";
 
 export const Helpers = () => {
   const [changeFiftyImg, setChangeFiftyImg] = useState(false);

@@ -89,7 +89,7 @@ const data = [
     ],
   },
   {
-    id: 2,
+    id: 5,
     question: "ვინ იყო ერთიანი საქართველოს პირველი მეფე?",
     answers: [
       {
@@ -106,6 +106,73 @@ const data = [
       },
       {
         text: "თამარ მეფე",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 6,
+    question: "ათოსი, პორთოსი, დ'არტანიანი და ... რა ჰქვია მეოთხე მუშკეტერს?",
+    answers: [
+      {
+        text: "რამისი",
+        correct: false,
+      },
+      {
+        text: "არამისი",
+        correct: true,
+      },
+      {
+        text: "რუდოლფი",
+        correct: false,
+      },
+      {
+        text: "ადამსი",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 7,
+    question:
+      "ჩასვით გამოტოვებული სიტყვა ცნობილ გამონათქვამში: ამ ქვეყანაში უფასო მხოლოდ, .... სათაგურში",
+    answers: [
+      {
+        text: "თხილი",
+        correct: false,
+      },
+      {
+        text: "პური",
+        correct: false,
+      },
+      {
+        text: "ნიგოზი",
+        correct: false,
+      },
+      {
+        text: "ყველი",
+        correct: true,
+      },
+    ],
+  },
+  {
+    id: 8,
+    question: "რომელი კონტინეტი მდებარეობს ყველა ნახევარსფეროში ერთდროულად?",
+    answers: [
+      {
+        text: "აფრიკა",
+        correct: true,
+      },
+      {
+        text: "სამხრეთ ამერიკა",
+        correct: false,
+      },
+      {
+        text: "ევრაზია",
+        correct: false,
+      },
+      {
+        text: "ავსტრალია",
         correct: false,
       },
     ],
