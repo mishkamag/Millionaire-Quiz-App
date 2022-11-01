@@ -13,19 +13,15 @@ export const Helpers = () => {
   // const removeRandom = (array) => {
   //   while (array.length) {
   //     const random = Math.floor(Math.random() * array.length);
-  //     const el = array.splice(random, 2)[0];
+  //     const el = array.splice(random ? null : 2)[0];
+  //     console.log(el);
   //   }
   // };
 
   const changeFiftyImgHandler = () => {
     setChangeFiftyImg(used50);
     const answs = data[0].answers.map((a) => a.correct);
-    const answsValue = answs.values();
-    for (let i of answsValue) {
-      if (i === !true) {
-        console.log(i);
-      }
-    }
+    console.log(answs);
   };
 
   const changeAudienceImgHandler = () => {
