@@ -11,6 +11,7 @@ export default function Trivia(props) {
 
   const [question, setQuestion] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [answered, setAnswered] = useState(false);
   const [className, setClassName] = useState("answer");
 
   const [corectAnswer] = useSound(correct);
@@ -18,6 +19,7 @@ export default function Trivia(props) {
 
   useEffect(() => {
     setQuestion(data[questionNumber - 1]);
+    setAnswered(false);
   }, [questionNumber]);
 
   const delay = (duration, callback) => {
@@ -27,6 +29,10 @@ export default function Trivia(props) {
   };
 
   const clickHandler = (a) => {
+    if (answered) {
+      return;
+    }
+    setAnswered(true);
     setSelectedAnswer(a);
     setClassName("answer active");
     delay(3000, () => {
