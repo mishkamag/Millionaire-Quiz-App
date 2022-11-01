@@ -66,6 +66,10 @@
   animation: wrong 3s ease forwards;
 }
 
+.block {
+  cursor: auto;
+}
+
 @keyframes wrong {
   0%,
   22%,
