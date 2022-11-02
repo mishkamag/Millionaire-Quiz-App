@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import StartGame from "./components/StartGame";
+import StartGame from "./components/Modal UI/StartGame";
 import play from "./assets/src_sounds_play.mp3";
 import useSound from "use-sound";
-import { Main } from "./components/Main";
-import Pyramid from "./components/Pyramid";
+import { Main } from "./components/Mains/Main";
+import Pyramid from "./components/PyramidList/Pyramid";
 
 function App() {
   const [questionNumber, setQuestionNumber] = useState(1);

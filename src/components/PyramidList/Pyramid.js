@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import { Helpers } from "./Helpers";
+import { Helpers } from "../Helper/Helpers";
 import "./Pyramid.css";
 
 export default function Pyramid(props) {

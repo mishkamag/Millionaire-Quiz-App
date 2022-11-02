@@ -1,10 +1,10 @@
 import "./trivia.css";
-import data from "./Questions";
+import data from "../Helper/Questions";
 import { useEffect, useState } from "react";
 import useSound from "use-sound";
 
-import correct from "../assets/src_sounds_correct.mp3";
-import wrong from "../assets/src_sounds_wrong.mp3";
+import correct from "../../assets/src_sounds_correct.mp3";
+import wrong from "../../assets/src_sounds_wrong.mp3";
 
 export default function Trivia(props) {
   const { setStop, questionNumber, setQuestionNumber } = props;
@@ -62,6 +62,7 @@ export default function Trivia(props) {
       <div className="answers">
         {question?.answers.map((a) => (
           <div
+            key={Math.random() * 100}
             className={selectedAnswer === a ? className : "answer"}
             onClick={() => clickHandler(a)}
           >
