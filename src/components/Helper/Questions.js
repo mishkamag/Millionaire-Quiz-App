@@ -138,19 +138,19 @@ const data = [
       "ჩასვით გამოტოვებული სიტყვა ცნობილ გამონათქვამში: ამ ქვეყანაში უფასო მხოლოდ, .... სათაგურში",
     answers: [
       {
-        text: "თხილი",
+        text: "თხილია",
         correct: false,
       },
       {
-        text: "პური",
+        text: "პურია",
         correct: false,
       },
       {
-        text: "ნიგოზი",
+        text: "ნიგოზია",
         correct: false,
       },
       {
-        text: "ყველი",
+        text: "ყველია",
         correct: true,
       },
     ],
@@ -173,6 +173,74 @@ const data = [
       },
       {
         text: "ავსტრალია",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 9,
+    question:
+      "ნ.დუმბაძის 'მარადისობის კანონის' მიხედვით რა არის ყველაზე მძიმე ადამიანის ორგანიზმში?",
+    answers: [
+      {
+        text: "გული",
+        correct: false,
+      },
+      {
+        text: "სული",
+        correct: true,
+      },
+      {
+        text: "ტვინი",
+        correct: false,
+      },
+      {
+        text: "ღვიძლი",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 10,
+    question: "ტექნიკური კულტურებიდან საქართველოში არ მოჰყავთ?",
+    answers: [
+      {
+        text: "თამბაქო",
+        correct: false,
+      },
+      {
+        text: "ბამბა",
+        correct: true,
+      },
+      {
+        text: "შაქრის ჭარხალი",
+        correct: false,
+      },
+      {
+        text: "მზესუმზირა",
+        correct: false,
+      },
+    ],
+  },
+  {
+    id: 11,
+    question:
+      "რომელი მიკრორასა შეიქმნა ამერიკის კონტინენტზე, ახალმოსახლე ევროპელების და ადგილობრივი ინდიელების შერევის შედეგად?",
+    answers: [
+      {
+        text: "მულატი",
+        correct: false,
+      },
+      {
+        text: "კრეოლი",
+        correct: false,
+      },
+      {
+        text: "მეტისი",
+        correct: true,
+      },
+      {
+        text: "სამბო",
         correct: false,
       },
     ],
