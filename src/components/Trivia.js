@@ -48,7 +48,7 @@ export default function Trivia(props) {
         });
       } else {
         wrongAnswer();
-        //ჩასამატებელია სწორი პასუხი რომ გამომიჩნდეს ეკრანზე
+
         delay(1000, () => {
           setStop(true);
         });
@@ -56,13 +56,12 @@ export default function Trivia(props) {
     });
   };
 
-  return (
+  const questionTrivia = (
     <div className="trivia">
       <div className="question">{question?.question}</div>
       <div className="answers">
         {question?.answers.map((a) => (
           <div
-            key={Math.random()}
             className={selectedAnswer === a ? className : "answer"}
             onClick={() => clickHandler(a)}
           >
@@ -72,4 +71,6 @@ export default function Trivia(props) {
       </div>
     </div>
   );
+
+  return questionTrivia;
 }
