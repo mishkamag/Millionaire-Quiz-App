@@ -10,18 +10,15 @@ export const Helpers = () => {
   const [changeFiftyImg, setChangeFiftyImg] = useState(false);
   const [changeAudienceImg, setChangeAudienceImg] = useState(false);
 
-  // const removeRandom = (array) => {
-  //   while (array.length) {
-  //     const random = Math.floor(Math.random() * array.length);
-  //     const el = array.splice(random ? null : 2)[0];
-  //     console.log(el);
-  //   }
-  // };
-
   const changeFiftyImgHandler = () => {
     setChangeFiftyImg(used50);
-    const answs = data[0].answers.map((a) => a.correct);
-    console.log(answs);
+    const answersArr = data[0].answers.map((a) => a.correct);
+    // console.log(answersArr);
+    const randIndex = Math.floor(Math.random() * answersArr.length); // Random Index position in the array
+    if (answersArr[randIndex] === !true) {
+      const randomize = answersArr.splice(randIndex, 2);
+      console.log(randomize);
+    }
   };
 
   const changeAudienceImgHandler = () => {
